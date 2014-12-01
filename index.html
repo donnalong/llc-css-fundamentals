@@ -123,6 +123,11 @@
             ##The content layer
         </section>
 
+        <section class="slide title" data-markdown>
+            #Before we continue...
+            ##...let's have a quick show of hands
+        </section>
+
         <section class="slide" data-markdown>
             ##HTML: Quick Review
             
@@ -451,11 +456,9 @@
         </section>
         
         <section class="slide" data-markdown>
-            ##Cascading
+            ##CSS
 
-            CSS executes from top to bottom (hence "cascading"), so be careful of the the order of your CSS declarations. The declaration that comes *after* will override the one that came before.
-
-            In this example, what colour will the `&lt;h1&gt;` be?
+            Be careful of the order you make CSS declarations! Your text editor isn't going to stop you from doing something like the example below:
 
             ```
             h1 {
@@ -465,7 +468,48 @@
                 color: blue;
             }
             ```
+
+            What colour will the `&lt;h1&gt;` be?
         </section>
+
+        <section class="slide" data-markdown>
+            ##Cascading Style Sheets
+
+            CSS executes from top to bottom (hence *cascading*), so be careful of the the order of your CSS declarations. The declaration that comes *after* will override the one that came before. 
+
+            ```
+            h1 {
+                color: black;
+            }
+            h1 {
+                color: blue;
+            }
+            ```
+
+            `&lt;h1&gt;` tags will be blue!
+
+            
+
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Cascading Style Sheets
+
+            Why is overwriting declarations like this useful?
+
+            ```
+            h1 {
+                color: black;
+            }
+            h1 {
+                color: blue;
+            }
+            ```
+
+            Hint: Can multiple declarations affect the same HTML element?
+
+        </section>
+
         <section class="slide" data-markdown>
             ##Inheritance and Specificity
 
@@ -667,6 +711,19 @@ h3 {
             * `height` - can be set to a specific size via CSS
         </section>
 
+        <section class="slide" data-markdown>
+            ##Box Model Review
+
+            Let’s look at a diagram to see how all these different properties work together to change the size of an element.
+
+            ![box model](framework/img/workshop/box-model.gif)
+
+
+            The original element started with a width and height of **400 x 100**. After including the padding, border &amp; margin, the size of the box is actually **452 x 152**!
+
+            Margin doesn't add to the actual size of the element but should be considered as part of the total size of the element because it adds space *around* it.
+        </section>
+
         <section class="slide">
             <h2>Padding and Margin</h2>
 
@@ -731,18 +788,7 @@ margin: 0 0 0 0;</textarea>
             ```
         </section>
 
-        <section class="slide" data-markdown>
-            ##Box Model Review
-
-            Let’s look at a diagram to see how all these different properties work together to change the size of an element.
-
-            ![box model](framework/img/workshop/box-model.gif)
-
-
-            The original element started with a width and height of **400 x 100**. After including the padding, border &amp; margin, the size of the box is actually **452 x 152**!
-
-            Margin doesn't add to the actual size of the element but should be considered as part of the total size of the element because it adds space *around* it.
-        </section>
+        
             
         <section class="slide centered" data-markdown>
             ##I Can't... even...
@@ -1075,10 +1121,6 @@ max-width: 1000px;</textarea>
 
             **Also**, if no width set, the element will float but the width will automatically be the width of its content.
         </section>
-        <section class="slide centered">
-            <img src="framework/img/workshop/shittier.gif">
-            <h2 class="delayed">Just kidding! We can fix it.</h2>
-        </section>
 
         <section class="slide">
             <h2>Float, Clear and Clearfix</h2>
@@ -1343,11 +1385,6 @@ a:hover {
 ```
         </section>
 
-        <section class="slide centered" data-markdown>
-            ##GIF Break
-            ![](framework/img/workshop/css.gif)
-        </section>
-
         <section class="slide">
             <h2>Gradients</h2>
 
@@ -1590,13 +1627,12 @@ See below for final code but only if you get stuck!
                 <span class="title-bg">CSS Fundamentals</span><br>
                 <span class="title-bg">for Beginners</span>
             </h2>
-            <h3><span>with</span> Christina Truong</h3>
+            <h3><span>with</span> Donna Long</h3>
 
-            <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
+            <img class="instructor-img" src="framework/img/donna3.jpg" alt="Christina Truong">
             <ul>
-                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatruong.com">hello@christinatruong.com</li>
-                <li><i class="fa fa-desktop"></i><a href="http://christinatruong.com">christinatruong.com</a></li>
-                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong">@christinatruong</a></li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:donna.kk.long@gmail.com">donna.kk.long@gmail.com</li>
+                <li><i class="fa fa-linkedin"></i><a href="http://www.linkedin.com/in/donnaklong">LinkedIn</a></li>
             </ul>
 
             <p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
